@@ -7,28 +7,45 @@
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Ensure the image is the only focus */
+        /* Basic styles for a clean look */
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevents scrollbars */
         }
     </style>
 </head>
-<body class="bg-black flex items-center justify-center w-full h-full">
+<body class="bg-black">
 
-    <!-- Main Image Container -->
-    <!-- The image will be centered and scaled to fit the screen without being cropped -->
-    <div class="w-full h-full flex items-center justify-center">
-        <img id="mainImage" 
-             src="https://i.ibb.co/fjbsLYQ/New-Project20116-BE5.jpg" alt="New-Project20116-BE5"
-             alt="Shared Image" 
-             class="max-w-full max-h-full object-contain"
-             onerror="this.onerror=null;this.src='https://placehold.co/600x400/ff0000/ffffff?text=Image+Failed+to+Load';"
+    <!-- Image Container -->
+    <!-- This div will hold the images, allowing them to stack vertically -->
+    <div>
+        <!-- First Image -->
+        <img id="mainImage1" 
+             src="NewProject20116BE5.jpeg"
+             alt="Shared Image 1" 
+             class="w-full h-auto block"
+             onerror="this.onerror=null;this.src='https://placehold.co/600x400/ff0000/ffffff?text=Image+1+Failed';"
+        >
+        
+        <!-- Second Image -->
+        <img id="mainImage2" 
+             src="poster.jpeg"
+             alt="Shared Image 2" 
+             class="w-full h-auto block"
+             onerror="this.onerror=null;this.src='https://placehold.co/600x400/ff0000/ffffff?text=Image+2+Failed';"
         >
     </div>
 
+    <!-- Floating Action Button -->
+    <a href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdTf7lzM-IGSNYCQ2Xwn_4LMuIM30bySkcXxktcyH_wKuFwdw/viewform?usp=sharing&ouid=109042031861691875077" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 bg-blue-600 text-white font-semibold py-3 px-5 rounded-full shadow-lg hover:bg-blue-700 transition-transform transform active:scale-95 z-10 flex items-center">
+        <!-- Pen icon for registration -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+        <span>Register Now</span>
+    </a>
+
 </body>
 </html>
-
