@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensure the image is the only focus */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+    </style>
+</head>
+<body class="bg-black flex items-center justify-center w-full h-full">
+
+    <!-- Main Image Container -->
+    <!-- The image will be centered and scaled to fit the screen without being cropped -->
+    <div class="w-full h-full flex items-center justify-center">
+        <img id="mainImage" 
+             src="https://i.ibb.co/s9xMNnjS/New-Project-20-116-BE54.png"
+             alt="Shared Image" 
+             class="max-w-full max-h-full object-contain"
+             onerror="this.onerror=null;this.src='https://placehold.co/600x400/ff0000/ffffff?text=Image+Failed+to+Load';"
+        >
+    </div>
+
+</body>
+</html>
